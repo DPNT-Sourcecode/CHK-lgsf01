@@ -36,40 +36,41 @@ public class CheckoutSolutionTest {
 
   @Test
   public void checkout_shouldReturn80_whenGivenProductAAndB() {
-    assertThat(solution.checkout("A,B")).isEqualTo(80);
+    assertThat(solution.checkout("AB")).isEqualTo(80);
 
   }
 
   @Test
   public void checkout_shouldReturn35_whenGivenProductCAndD() {
-    assertThat(solution.checkout("C,D")).isEqualTo(35);
+    assertThat(solution.checkout("CD")).isEqualTo(35);
   }
 
   @Test
   public void checkout_shouldReturn130AndApplyDiscount_whenGivenThreeAs() {
-    assertThat(solution.checkout("A,A,A")).isEqualTo(130);
+    assertThat(solution.checkout("AAA")).isEqualTo(130);
   }
 
   @Test
   public void checkout_shouldReturnExpectedValue_whenThereIsADiscountAndAdditionalItems() {
-    assertThat(solution.checkout("A,A,A,A")).isEqualTo(180);
+    assertThat(solution.checkout("AAAA")).isEqualTo(180);
   }
 
   @Test
   public void checkout_shouldReturn45AndApplyDiscount_whenGivenTwoBs() {
-    assertThat(solution.checkout("B,B")).isEqualTo(45);
+    assertThat(solution.checkout("BB")).isEqualTo(45);
   }
 
   @Test
   public void checkout_shouldReturn175_whenDiscountsForMultipleItemsApply() {
-    assertThat(solution.checkout("A,A,A,B,B")).isEqualTo(175);
+    assertThat(solution.checkout("AAABB")).isEqualTo(175);
   }
 
   @Test
   public void checkout_shouldReturnMinusOne_whenIllegalInputIsSupplied() {
-    assertThat(solution.checkout("A,Z")).isEqualTo(-1);
+    assertThat(solution.checkout("AZ")).isEqualTo(-1);
   }
 }
+
 
 
 

@@ -1,16 +1,10 @@
 package befaster.solutions.CHK;
 
-import befaster.runner.SolutionNotImplementedException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         Basket basket = new Basket();
-
-        String[] products = skus.split(",");
+        String[] products = skus.split("");
 
         for(String product : products) {
             try {
@@ -23,6 +17,7 @@ public class CheckoutSolution {
         return basket.getTotal();
     }
 }
+
 
 
 
