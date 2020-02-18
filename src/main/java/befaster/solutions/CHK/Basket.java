@@ -1,6 +1,9 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.promotions.FiveAsPromotion;
 import befaster.solutions.CHK.promotions.Promotion;
+import befaster.solutions.CHK.promotions.ThreeAsPromotion;
+import befaster.solutions.CHK.promotions.TwoBsPromotion;
 import com.google.common.collect.Lists;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +22,9 @@ public class Basket {
   public Basket() {
     priceList.getAllProducts().forEach(p -> quantities.put(p.getName(), 0));
 
-    promotions.add(new)
+    promotions.add(new FiveAsPromotion());
+    promotions.add(new ThreeAsPromotion());
+    promotions.add(new TwoBsPromotion());
   }
 
   public void addItem(String item) {
@@ -59,5 +64,6 @@ public class Basket {
     this.quantities = quantities;
   }
 }
+
 
 
