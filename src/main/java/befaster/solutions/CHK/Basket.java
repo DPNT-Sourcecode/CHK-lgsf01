@@ -4,6 +4,7 @@ import befaster.solutions.CHK.promotions.FiveAsPromotion;
 import befaster.solutions.CHK.promotions.Promotion;
 import befaster.solutions.CHK.promotions.ThreeAsPromotion;
 import befaster.solutions.CHK.promotions.TwoBsPromotion;
+import befaster.solutions.CHK.promotions.TwoEsGetOneFreeBPromotion;
 import com.google.common.collect.Lists;
 import java.util.HashMap;
 import java.util.List;
@@ -24,6 +25,7 @@ public class Basket {
 
     promotions.add(new FiveAsPromotion());
     promotions.add(new ThreeAsPromotion());
+    promotions.add(new TwoEsGetOneFreeBPromotion());
     promotions.add(new TwoBsPromotion());
   }
 
@@ -67,3 +69,4 @@ public class Basket {
     this.quantities = quantities;
   }
 }
+
