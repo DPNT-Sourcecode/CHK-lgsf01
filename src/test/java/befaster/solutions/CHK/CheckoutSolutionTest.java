@@ -1,19 +1,18 @@
 package befaster.solutions.CHK;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplicationRunListener;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@SpringBootTest
-@RunWith(SpringJUnit4ClassRunner.class)
+import org.junit.Before;
+import org.junit.Test;
+
 public class CheckoutSolutionTest {
 
-  @Autowired
   private CheckoutSolution solution;
+
+  @Before
+  public void before(){
+    solution = new CheckoutSolution();
+  }
 
   @Test
   public void checkout_shouldReturn50_whenGivenProductA() {
@@ -53,4 +52,5 @@ public class CheckoutSolutionTest {
   }
 
 }
+
 
