@@ -9,12 +9,7 @@ public class Basket {
   private Map<String, Integer> quantities = new HashMap<>();
 
   public Basket() {
-    quantities.put("A", 0);
-    quantities.put("B", 0);
-    quantities.put("C", 0);
-    quantities.put("D", 0);
-
-    priceList.
+    priceList.getAllProducts().forEach(p -> quantities.put(p.getName(), 0));
   }
 
   public void addItem(String item) {
@@ -50,4 +45,5 @@ public class Basket {
 
 
 }
+
 
