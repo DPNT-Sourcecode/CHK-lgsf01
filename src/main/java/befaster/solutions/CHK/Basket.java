@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Basket {
 
-  private PriceList priceList;
+  private PriceList priceList = PriceList.getInstance();
   private Map<String, Integer> quantities = new HashMap<>();
 
   public void addItem(String item) {
@@ -37,4 +37,5 @@ public class Basket {
 
 
 }
+
 

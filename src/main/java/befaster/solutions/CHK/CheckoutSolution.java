@@ -7,12 +7,13 @@ import java.util.Map;
 
 public class CheckoutSolution {
 
-    private Basket basket;
-
     public Integer checkout(String skus) {
+        Basket basket = new Basket();
+
         String[] products = skus.split(",");
         Arrays.stream(products).forEach(basket::addItem);
         return basket.getTotal();
     }
 }
+
 
