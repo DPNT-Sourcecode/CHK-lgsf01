@@ -71,5 +71,3 @@ public class Basket {
     this.quantities = quantities;
   }
 }
-
-

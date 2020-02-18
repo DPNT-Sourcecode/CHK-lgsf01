@@ -115,7 +115,3 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("FFF")).isEqualTo(20);
   }
 }
-
-
-
-

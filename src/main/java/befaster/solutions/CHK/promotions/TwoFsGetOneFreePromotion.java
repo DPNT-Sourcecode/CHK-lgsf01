@@ -8,4 +8,3 @@ public class TwoFsGetOneFreePromotion extends MultibuyPromotion implements Promo
     applyMultibuy(basket, "F", 3, 10);
   }
 }
-

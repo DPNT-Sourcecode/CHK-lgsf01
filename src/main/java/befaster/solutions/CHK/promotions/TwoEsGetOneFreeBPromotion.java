@@ -27,5 +27,3 @@ public class TwoEsGetOneFreeBPromotion implements Promotion {
   }
 
 }
-
-

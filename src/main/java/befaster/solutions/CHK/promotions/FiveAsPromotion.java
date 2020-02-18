@@ -11,4 +11,3 @@ public class FiveAsPromotion extends MultibuyPromotion implements Promotion {
   }
 
 }
-
