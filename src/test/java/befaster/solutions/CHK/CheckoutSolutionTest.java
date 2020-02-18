@@ -89,4 +89,10 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyDiscountsInCorrectOrderAndReturn330_whenGiven8As() {
     assertThat(solution.checkout("AAAAAAAA")).isEqualTo(330);
   }
+
+  @Test
+  public void checkout_shouldNotChargeForBProductAndReturnXXX_whenTwoEsAreGiven() {
+    assertThat(solution.checkout("EEB")).isEqualTo(80);
+  }
 }
+
