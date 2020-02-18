@@ -6,18 +6,17 @@ public class Product {
 
   private final String name;
   private final int price;
-  private final Optional<Discount> discount;
+  private Discount discount;
 
   public Product(String name, int price) {
     this.name = name;
     this.price = price;
-    this.discount = Optional.empty();
   }
 
   public Product(String name, int price, Discount discount) {
     this.name = name;
     this.price = price;
-    this.discount = Optional.ofNullable(discount);
+    this.discount = discount;
   }
 
   public String getName() {
@@ -29,6 +28,7 @@ public class Product {
   }
 
   public Optional<Discount> getDiscount() {
-    return discount;
+    return Optional.ofNullable(discount);
   }
 }
+

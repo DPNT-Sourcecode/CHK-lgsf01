@@ -9,15 +9,14 @@ import org.springframework.stereotype.Component;
 public class Basket {
 
   @Autowired private PriceList priceList;
-
-
-  private Map<String, Integer> quantities = new HashMap<>();
+  private Map<String, Integer> quantities = new HashMap<String, Integer>();
 
 
   public void addItem(String item) {
-
+    quantities.put(item,
+        quantities.get(item)+1
+    );
   }
-
 
 
   public void getTotal() {
@@ -27,4 +26,5 @@ public class Basket {
 
 
 }
+
 
