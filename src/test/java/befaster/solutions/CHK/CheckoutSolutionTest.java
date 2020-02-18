@@ -91,8 +91,15 @@ public class CheckoutSolutionTest {
   }
 
   @Test
-  public void checkout_shouldNotChargeForBProductAndReturnXXX_whenTwoEsAreGiven() {
+  public void checkout_shouldNotChargeForBProductAndReturn80_whenTwoEsAreGiven() {
     assertThat(solution.checkout("EEB")).isEqualTo(80);
   }
+
+  @Test
+  public void checkout_shouldReturn80_whenTwoEsAreGiven() {
+    assertThat(solution.checkout("EE")).isEqualTo(80);
+
+  }
 }
+
 

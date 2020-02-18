@@ -16,9 +16,9 @@ public class TwoEsGetOneFreeBPromotion implements Promotion {
       int numberOfBs = quantities.get("B");
       if(numberOfBs > 0) {
         quantities.put("B", numberOfBs - 1);
+        total -= 30;
       }
 
-      total -= 30;
       tempQuantity -= 2;
     }
 
@@ -27,4 +27,5 @@ public class TwoEsGetOneFreeBPromotion implements Promotion {
   }
 
 }
+
 
