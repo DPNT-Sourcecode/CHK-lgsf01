@@ -12,11 +12,12 @@ public class PriceList {
   private Map<String, Product> products = new HashMap<>();
 
   private PriceList() {
-    products.put("A", new Product("A", 50, new Discount(3, 130)));
-    products.put("B", new Product("B", 30, new Discount(2, 45)));
+    products.put("A", new Product("A", 50));
+    products.put("B", new Product("B", 30));
     products.put("C", new Product("C", 20));
     products.put("D", new Product("D", 15));
     products.put("E", new Product("E", 40));
+    products.put("F", new Product("F", 10));
   }
 
   public static PriceList getInstance() {
@@ -34,3 +35,4 @@ public class PriceList {
     return new ArrayList<>(products.values());
   }
 }
+
