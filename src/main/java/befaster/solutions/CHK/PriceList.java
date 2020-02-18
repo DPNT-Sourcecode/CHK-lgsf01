@@ -2,7 +2,9 @@ package befaster.solutions.CHK;
 
 import com.google.common.collect.Lists;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PriceList {
 
   private List<Product> products = Lists.newArrayList();
@@ -14,3 +16,4 @@ public class PriceList {
     products.add(new Product("D", 15));
   }
 }
+
