@@ -43,6 +43,18 @@ public class CheckoutSolutionTest {
 
   }
 
+  @Test
+  public void checkout_shouldReturn35_whenGivenProductCAndD() {
+    assertThat(solution.checkout("C,D")).isEqualTo(35);
+  }
+
+  @Test
+  public void checkout_shouldReturn130AndApplyDiscount_whenGivenThreeAs() {
+    assertThat(solution.checkout("A,A,A")).isEqualTo(130);
+
+  }
+
 }
+
 
 
