@@ -15,6 +15,11 @@ public class CheckoutSolutionTest {
   }
 
   @Test
+  public void checkout_shouldReturn0_whenGivenEmptyString() {
+    assertThat(solution.checkout("")).isEqualTo(0);
+  }
+
+  @Test
   public void checkout_shouldReturn50_whenGivenProductA() {
     assertThat(solution.checkout("A")).isEqualTo(50);
   }
@@ -70,8 +75,3 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("AZ")).isEqualTo(-1);
   }
 }
-
-
-
-
-
