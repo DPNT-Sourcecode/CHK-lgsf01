@@ -25,4 +25,3 @@ public class CheckoutSolution {
         return basket.getTotal();
     }
 }
-

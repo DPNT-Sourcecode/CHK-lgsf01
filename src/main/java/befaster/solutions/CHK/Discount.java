@@ -18,4 +18,3 @@ public class Discount {
     return price;
   }
 }
-

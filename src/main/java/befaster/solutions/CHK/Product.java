@@ -31,4 +31,3 @@ public class Product {
     return Optional.ofNullable(discount);
   }
 }
-

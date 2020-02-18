@@ -36,6 +36,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test
     testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version: '2.2.4.RELEASE'
 
+    // https://mvnrepository.com/artifact/org.springframework/spring-test
+    testCompile group: 'org.springframework', name: 'spring-test', version: '2.5'
+
 
 
 
@@ -77,5 +80,3 @@ jacocoTestReport {
         html.destination file("${buildDir}/jacocoHtml")
     }
 }
-
-
