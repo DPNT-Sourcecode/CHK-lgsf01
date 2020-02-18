@@ -62,10 +62,15 @@ public class CheckoutSolutionTest {
 
   @Test
   public void checkout_shouldReturn175_whenDiscountsForMultipleItemsApply() {
-    assertThat(solution.checkout("A,A,AB,B")).isEqualTo(175);
+    assertThat(solution.checkout("A,A,A,B,B")).isEqualTo(175);
+  }
 
+  @Test
+  public void checkout_shouldReturnMinusOne_whenIllegalInputIsSupplied() {
+    assertThat(solution.checkout("A,Z")).isEqualTo(-1);
   }
 }
+
 
 
 
