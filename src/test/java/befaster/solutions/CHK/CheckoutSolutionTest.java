@@ -79,4 +79,11 @@ public class CheckoutSolutionTest {
   public void checkout_shouldReturnMinusOne_whenIllegalInputIsSupplied() {
     assertThat(solution.checkout("AZ")).isEqualTo(-1);
   }
+
+  @Test
+  public void checkout_shouldReturn200_whenGiven5As() {
+    assertThat(solution.checkout("AAAAA")).isEqualTo(200);
+
+  }
 }
+
