@@ -21,4 +21,3 @@ public class CheckoutSolution {
         return basket.checkout();
     }
 }
-

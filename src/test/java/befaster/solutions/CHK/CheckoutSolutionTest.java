@@ -90,5 +90,3 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("AAAAAAAA")).isEqualTo(330);
   }
 }
-
-
