@@ -48,9 +48,24 @@ public class CheckoutSolutionTest {
   @Test
   public void checkout_shouldReturn130AndApplyDiscount_whenGivenThreeAs() {
     assertThat(solution.checkout("A,A,A")).isEqualTo(130);
-
   }
 
+  @Test
+  public void checkout_shouldReturnExpectedValue_whenThereIsADiscountAndAdditionalItems() {
+    assertThat(solution.checkout("A,A,A,A")).isEqualTo(180);
+  }
+
+  @Test
+  public void checkout_shouldReturn45AndApplyDiscount_whenGivenTwoBs() {
+    assertThat(solution.checkout("B,B")).isEqualTo(45);
+  }
+
+  @Test
+  public void checkout_shouldReturn175_whenDiscountsForMultipleItemsApply() {
+    assertThat(solution.checkout("A,A,AB,B")).isEqualTo(175);
+
+  }
 }
+
 
 
