@@ -8,6 +8,13 @@ public class Basket {
   private PriceList priceList = PriceList.getInstance();
   private Map<String, Integer> quantities = new HashMap<>();
 
+  public Basket() {
+    quantities.put("A", 0);
+    quantities.put("B", 0);
+    quantities.put("C", 0);
+    quantities.put("D", 0);
+  }
+
   public void addItem(String item) {
     quantities.put(item,
         quantities.get(item)+1
@@ -23,7 +30,7 @@ public class Basket {
 
       if(product.getDiscount().isPresent()) {
         Discount discount = product.getDiscount().get();
-        while(tempQuantity > discount.getQualifyingQuantity()) {
+        while(tempQuantity >= discount.getQualifyingQuantity()) {
           total += discount.getPrice();
           tempQuantity = tempQuantity - discount.getQualifyingQuantity();
         }
@@ -37,5 +44,6 @@ public class Basket {
 
 
 }
+
 
 
