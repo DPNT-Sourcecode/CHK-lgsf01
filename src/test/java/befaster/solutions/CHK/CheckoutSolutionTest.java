@@ -27,4 +27,15 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("B")).isEqualTo(30);
   }
 
+  @Test
+  public void checkout_shouldReturn20_whenGivenProductB() {
+    assertThat(solution.checkout("C")).isEqualTo(20);
+  }
+
+  @Test
+  public void checkout_shouldReturn15_whenGivenProductB() {
+    assertThat(solution.checkout("D")).isEqualTo(15);
+  }
+
 }
+
