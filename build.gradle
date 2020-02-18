@@ -30,6 +30,10 @@ dependencies {
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.2'
 
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    compile group: 'org.springframework', name: 'spring-core', version: '5.2.2.RELEASE'
+
+
 }
 
 // Making the app runnable
@@ -68,3 +72,4 @@ jacocoTestReport {
         html.destination file("${buildDir}/jacocoHtml")
     }
 }
+
