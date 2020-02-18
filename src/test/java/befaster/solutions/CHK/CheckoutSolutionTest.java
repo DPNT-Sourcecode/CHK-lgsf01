@@ -37,5 +37,12 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("D")).isEqualTo(15);
   }
 
+  @Test
+  public void checkout_shouldReturn80_whenGivenProductAAndB() {
+    assertThat(solution.checkout("A,B")).isEqualTo(80);
+
+  }
+
 }
+
 
