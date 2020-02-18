@@ -14,4 +14,3 @@ public class PriceList {
     products.add(new Product("D", 15));
   }
 }
-

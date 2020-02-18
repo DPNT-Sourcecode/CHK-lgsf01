@@ -22,5 +22,3 @@ public class CheckoutSolution {
         return Arrays.stream(products).mapToInt(prices::get).sum();
     }
 }
-
-
