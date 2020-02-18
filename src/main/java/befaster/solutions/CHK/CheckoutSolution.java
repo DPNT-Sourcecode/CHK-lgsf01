@@ -11,9 +11,18 @@ public class CheckoutSolution {
         Basket basket = new Basket();
 
         String[] products = skus.split(",");
-        Arrays.stream(products).forEach(basket::addItem);
+
+        for(String product : products) {
+            try {
+                basket.addItem(product);
+            } catch (IllegalInputException e) {
+                return -1;
+            }
+        }
+
         return basket.getTotal();
     }
 }
+
 
 

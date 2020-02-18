@@ -16,6 +16,10 @@ public class Basket {
   }
 
   public void addItem(String item) {
+    if(quantities.get(item) == null) {
+      throw new IllegalInputException(String.format("%s is not a valid product code", item));
+    }
+
     quantities.put(item,
         quantities.get(item)+1
     );
@@ -44,6 +48,7 @@ public class Basket {
 
 
 }
+
 
 
 
