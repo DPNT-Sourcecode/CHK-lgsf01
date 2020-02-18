@@ -1,7 +1,5 @@
 package befaster.solutions.CHK;
 
-import java.util.Arrays;
-
 public class CheckoutSolution {
 
     public Integer checkout(String skus) {
@@ -20,6 +18,7 @@ public class CheckoutSolution {
             }
         }
 
-        return basket.getTotal();
+        return basket.checkout();
     }
 }
+

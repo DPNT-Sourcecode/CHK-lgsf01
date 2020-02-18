@@ -1,15 +1,25 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.promotions.Promotion;
+import com.google.common.collect.Lists;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Basket {
+
+  private int total = 0;
+
+
+  private List<Promotion> promotions = Lists.newArrayList();
 
   private PriceList priceList = PriceList.getInstance();
   private Map<String, Integer> quantities = new HashMap<>();
 
   public Basket() {
     priceList.getAllProducts().forEach(p -> quantities.put(p.getName(), 0));
+
+    promotions.add(new)
   }
 
   public void addItem(String item) {
@@ -22,26 +32,23 @@ public class Basket {
     );
   }
 
-  public int getTotal() {
-    int total = 0;
+  public int checkout() {
 
     for(Map.Entry<String, Integer> entry : quantities.entrySet()) {
-      int tempQuantity = entry.getValue();
       Product product = priceList.getProduct(entry.getKey());
-
-      if(product.getDiscount().isPresent()) {
-        Discount discount = product.getDiscount().get();
-        while(tempQuantity >= discount.getQualifyingQuantity()) {
-          total += discount.getPrice();
-          tempQuantity = tempQuantity - discount.getQualifyingQuantity();
-        }
-      }
-
-      total = total + (tempQuantity * product.getPrice());
+      total = total + (entry.getValue() * product.getPrice());
     }
 
     return total;
   }
 
 
+  public int getTotal() {
+    return total;
+  }
+
+  public void setTotal(int total) {
+    this.total = total;
+  }
 }
+

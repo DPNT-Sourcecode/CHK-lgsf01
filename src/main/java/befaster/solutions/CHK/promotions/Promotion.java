@@ -1,4 +1,8 @@
 package befaster.solutions.CHK.promotions;
 
-public class Promotion {
+import befaster.solutions.CHK.Basket;
+
+public interface Promotion {
+  void apply(Basket basket);
 }
+
