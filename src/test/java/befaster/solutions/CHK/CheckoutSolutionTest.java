@@ -1,12 +1,10 @@
 package befaster.solutions.CHK;
-
-
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 public class CheckoutSolutionTest {
 
@@ -55,3 +53,4 @@ public class CheckoutSolutionTest {
   }
 
 }
+
