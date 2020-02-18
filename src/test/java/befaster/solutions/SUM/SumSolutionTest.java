@@ -19,4 +19,10 @@ public class SumSolutionTest {
     public void compute_sum() {
         assertThat(sum.compute(1, 1), equalTo(2));
     }
+
+    @Test
+    public void compute_shouldReturn5_whenPassed3And2() {
+        assertThat(sum.compute(3, 2), equalTo(5));
+    }
 }
+
