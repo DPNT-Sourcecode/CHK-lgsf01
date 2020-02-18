@@ -103,9 +103,19 @@ public class CheckoutSolutionTest {
   @Test
   public void checkout_shouldReturn80_whenTwoEsAreGiven() {
     assertThat(solution.checkout("EE")).isEqualTo(80);
+  }
 
+  @Test
+  public void checkout_shouldReturn20_whenTwoFsAreGiven() {
+    assertThat(solution.checkout("FF")).isEqualTo(20);
+  }
+
+  @Test
+  public void checkout_shouldReturn20_whenThreeFsAreGiven() {
+    assertThat(solution.checkout("FFF")).isEqualTo(20);
   }
 }
+
 
 
 
