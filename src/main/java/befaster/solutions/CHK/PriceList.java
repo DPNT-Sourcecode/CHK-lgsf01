@@ -1,6 +1,8 @@
 package befaster.solutions.CHK;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PriceList {
@@ -27,5 +29,10 @@ public class PriceList {
   public Product getProduct(String productCode) {
     return products.get(productCode);
   }
+
+  public List<Product> getAllProducts() {
+    return new ArrayList<>(products.values());
+  }
 }
+
 

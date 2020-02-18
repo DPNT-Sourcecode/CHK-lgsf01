@@ -13,6 +13,8 @@ public class Basket {
     quantities.put("B", 0);
     quantities.put("C", 0);
     quantities.put("D", 0);
+
+    priceList.
   }
 
   public void addItem(String item) {
@@ -48,3 +50,4 @@ public class Basket {
 
 
 }
+
