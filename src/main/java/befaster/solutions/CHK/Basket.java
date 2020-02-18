@@ -50,5 +50,14 @@ public class Basket {
   public void setTotal(int total) {
     this.total = total;
   }
+
+  public Map<String, Integer> getQuantities() {
+    return quantities;
+  }
+
+  public void setQuantities(Map<String, Integer> quantities) {
+    this.quantities = quantities;
+  }
 }
+
 
