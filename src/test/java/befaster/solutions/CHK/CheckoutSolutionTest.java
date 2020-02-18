@@ -80,4 +80,3 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("AZ")).isEqualTo(-1);
   }
 }
-
