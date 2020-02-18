@@ -1,6 +1,8 @@
 package befaster.solutions.CHK;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 import org.junit.Before;
@@ -17,10 +19,12 @@ public class CheckoutSolutionTest {
 
   @Test
   public void checkout_shouldReturn50_whenGivenProductA() {
-    assertThat()
-    solution.checkout("A");
+    assertThat(solution.checkout("A")).isEqualTo(50);
   }
 
-
+  @Test
+  public void checkout_shouldReturn30_whenGivenProductB() {
+    assertThat(solution.checkout("B")).isEqualTo(30);
+  }
 
 }
