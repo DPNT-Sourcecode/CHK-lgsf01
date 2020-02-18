@@ -38,15 +38,18 @@ public class Basket {
   }
 
   public int checkout() {
-
     for(Map.Entry<String, Integer> entry : quantities.entrySet()) {
       Product product = priceList.getProduct(entry.getKey());
       total = total + (entry.getValue() * product.getPrice());
     }
 
+    applyPromotions();
     return total;
   }
 
+  public void applyPromotions() {
+    promotions.forEach(promo -> promo.apply(this));
+  }
 
   public int getTotal() {
     return total;
@@ -64,6 +67,7 @@ public class Basket {
     this.quantities = quantities;
   }
 }
+
 
 
 

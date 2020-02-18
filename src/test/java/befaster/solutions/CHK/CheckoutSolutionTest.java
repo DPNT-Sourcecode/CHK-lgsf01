@@ -83,7 +83,12 @@ public class CheckoutSolutionTest {
   @Test
   public void checkout_shouldReturn200_whenGiven5As() {
     assertThat(solution.checkout("AAAAA")).isEqualTo(200);
+  }
 
+  @Test
+  public void checkout_shouldApplyDiscountsInCorrectOrderAndReturn330_whenGiven8As() {
+    assertThat(solution.checkout("AAAAAAAA")).isEqualTo(330);
   }
 }
+
 
