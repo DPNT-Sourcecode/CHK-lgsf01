@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Basket {
 
   @Autowired private PriceList priceList;
-  private Map<String, Integer> quantities = new HashMap<String, Integer>();
+  private Map<String, Integer> quantities = new HashMap<>();
 
 
   public void addItem(String item) {
@@ -18,13 +18,29 @@ public class Basket {
     );
   }
 
+  public int getTotal() {
+    int total = 0;
 
-  public void getTotal() {
+    for(Map.Entry<String, Integer> entry : quantities.entrySet()) {
+      int tempQuantity = entry.getValue();
+      Product product = priceList.getProduct(entry.getKey());
 
+      if(product.getDiscount().isPresent()) {
+        Discount discount = product.getDiscount().get();
+        while(tempQuantity > discount.getQualifyingQuantity()) {
+          total += discount.getPrice();
+          tempQuantity = tempQuantity - discount.getQualifyingQuantity();
+        }
+      }
+
+      total = total + (tempQuantity * product.getPrice());
+    }
+
+    return total;
   }
 
 
-
 }
+
 
 
