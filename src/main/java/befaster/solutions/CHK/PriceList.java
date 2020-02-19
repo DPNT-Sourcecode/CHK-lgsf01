@@ -60,4 +60,3 @@ public class PriceList {
     return new ArrayList<>(products.values());
   }
 }
-

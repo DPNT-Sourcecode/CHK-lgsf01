@@ -8,6 +8,8 @@ import befaster.solutions.CHK.promotions.TenHsPromotion;
 import befaster.solutions.CHK.promotions.ThreeAsPromotion;
 import befaster.solutions.CHK.promotions.ThreeNsGetOneFreeMPromotion;
 import befaster.solutions.CHK.promotions.ThreeQsPromotion;
+import befaster.solutions.CHK.promotions.ThreeRsGetOneFreeQPromotion;
+import befaster.solutions.CHK.promotions.ThreeUsGetOneFreePromotion;
 import befaster.solutions.CHK.promotions.TwoBsPromotion;
 import befaster.solutions.CHK.promotions.TwoEsGetOneFreeBPromotion;
 import befaster.solutions.CHK.promotions.TwoFsGetOneFreePromotion;
@@ -41,7 +43,9 @@ public class Basket {
     promotions.add(new TwoKsPromotion());
     promotions.add(new ThreeNsGetOneFreeMPromotion());
     promotions.add(new FivePsPromotion());
+    promotions.add(new ThreeRsGetOneFreeQPromotion());
     promotions.add(new ThreeQsPromotion());
+    promotions.add(new ThreeUsGetOneFreePromotion());
   }
 
   public void addItem(String item) {
@@ -84,7 +88,3 @@ public class Basket {
     this.quantities = quantities;
   }
 }
-
-
-
-
