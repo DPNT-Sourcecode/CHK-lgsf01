@@ -27,12 +27,14 @@ public class GroupPromotion implements Promotion {
 
         if(tempStore.size() == 3) {
           totalDiscount += calculateDiscount(tempStore);
+          quantities = tempQuantities;
           tempStore.clear();
         }
       }
     }
 
     basket.setTotal(total - totalDiscount);
+    basket.setQuantities(quantities);
 
   }
 
@@ -47,4 +49,5 @@ public class GroupPromotion implements Promotion {
     return fullPrice - 45;
   }
 }
+
 
