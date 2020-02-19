@@ -130,7 +130,13 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyTwoKsPromotion() {
     assertThat(solution.checkout("KK")).isEqualTo(150);
   }
+
+  @Test
+  public void checkout_shouldApplyTwoNsGetAFreeMPromotion() {
+    assertThat(solution.checkout("NNNM")).isEqualTo(120);
+  }
 }
+
 
 
 
