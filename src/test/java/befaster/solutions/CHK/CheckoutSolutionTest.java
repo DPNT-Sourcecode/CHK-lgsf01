@@ -145,7 +145,18 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyFivePsPromotion() {
     assertThat(solution.checkout("PPPPP")).isEqualTo(200);
   }
+
+  @Test
+  public void checkout_shouldApplyThreeQsPromotion() {
+    assertThat(solution.checkout("QQQ")).isEqualTo(80);
+  }
+
+  @Test
+  public void checkout_shouldApplyThreeRsOneFreeQPromotion() {
+    assertThat(solution.checkout("RRRQ")).isEqualTo(150);
+  }
 }
+
 
 
 
