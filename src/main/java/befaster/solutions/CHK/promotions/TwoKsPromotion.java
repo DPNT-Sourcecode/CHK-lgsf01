@@ -6,7 +6,8 @@ public class TwoKsPromotion extends MultibuyPromotion implements Promotion {
 
   @Override
   public void apply(Basket basket) {
-    applyMultibuy(basket, "K", 2, 10);
+    applyMultibuy(basket, "K", 2, 20);
   }
 
 }
+

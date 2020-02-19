@@ -128,7 +128,7 @@ public class CheckoutSolutionTest {
 
   @Test
   public void checkout_shouldApplyTwoKsPromotion() {
-    assertThat(solution.checkout("KK")).isEqualTo(150);
+    assertThat(solution.checkout("KK")).isEqualTo(120);
   }
 
   @Test
@@ -180,5 +180,26 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyGroupDiscount_ForThreeS() {
     assertThat(solution.checkout("SSS")).isEqualTo(45);
   }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForThreeTs() {
+    assertThat(solution.checkout("TTT")).isEqualTo(45);
+  }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForThreeXs() {
+    assertThat(solution.checkout("XXX")).isEqualTo(45);
+  }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForThreeYs() {
+    assertThat(solution.checkout("YYY")).isEqualTo(45);
+  }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForThreeZs() {
+    assertThat(solution.checkout("ZZZ")).isEqualTo(45);
+  }
 }
+
 
