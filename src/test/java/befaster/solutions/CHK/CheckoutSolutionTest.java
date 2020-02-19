@@ -114,5 +114,19 @@ public class CheckoutSolutionTest {
   public void checkout_shouldReturn20_whenThreeFsAreGiven() {
     assertThat(solution.checkout("FFF")).isEqualTo(20);
   }
+
+  @Test
+  public void checkout_shouldApplyTenHsPromotion() {
+    assertThat(solution.checkout("HHHHHHHHHH")).isEqualTo(80);
+
+  }
+
+  Test
+  public void checkout_shouldApplyFiveHsPromotion() {
+    assertThat(solution.checkout("HHHHH")).isEqualTo(45);
+
+  }
+
 }
+
 

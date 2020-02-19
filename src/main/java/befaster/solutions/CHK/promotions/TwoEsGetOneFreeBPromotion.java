@@ -1,6 +1,7 @@
 package befaster.solutions.CHK.promotions;
 
 import befaster.solutions.CHK.Basket;
+import befaster.solutions.CHK.PriceList;
 import java.util.Map;
 
 public class TwoEsGetOneFreeBPromotion implements Promotion {
@@ -16,7 +17,7 @@ public class TwoEsGetOneFreeBPromotion implements Promotion {
       int numberOfBs = quantities.get("B");
       if(numberOfBs > 0) {
         quantities.put("B", numberOfBs - 1);
-        total -= 30;
+        total -= PriceList.getInstance().getProduct("B").getPrice();
       }
 
       tempQuantity -= 2;
@@ -27,3 +28,4 @@ public class TwoEsGetOneFreeBPromotion implements Promotion {
   }
 
 }
+
