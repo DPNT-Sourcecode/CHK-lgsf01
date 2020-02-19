@@ -82,7 +82,7 @@ public class CheckoutSolutionTest {
 
   @Test
   public void checkout_shouldReturnMinusOne_whenIllegalInputIsSupplied() {
-    assertThat(solution.checkout("AZ")).isEqualTo(-1);
+    assertThat(solution.checkout("@")).isEqualTo(-1);
   }
 
   @Test
@@ -115,3 +115,4 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("FFF")).isEqualTo(20);
   }
 }
+
