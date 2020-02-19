@@ -10,4 +10,3 @@ public class TwoKsPromotion extends MultibuyPromotion implements Promotion {
   }
 
 }
-

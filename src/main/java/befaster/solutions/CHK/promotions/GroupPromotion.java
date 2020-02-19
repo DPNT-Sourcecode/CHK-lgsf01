@@ -49,7 +49,3 @@ public class GroupPromotion implements Promotion {
     return fullPrice - 45;
   }
 }
-
-
-
-

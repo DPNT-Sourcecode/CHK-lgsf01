@@ -228,7 +228,3 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("STXZ")).isEqualTo(62);
   }
 }
-
-
-
-
