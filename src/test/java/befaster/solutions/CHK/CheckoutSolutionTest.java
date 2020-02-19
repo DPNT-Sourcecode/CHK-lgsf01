@@ -165,4 +165,15 @@ public class CheckoutSolutionTest {
   public void checkout_shouldReturn120_forThreeUs() {
     assertThat(solution.checkout("UUU")).isEqualTo(120);
   }
+
+  @Test
+  public void checkout_shouldApplyThreeVsPromotion() {
+    assertThat(solution.checkout("VVV")).isEqualTo(130);
+  }
+
+  @Test
+  public void checkout_shouldApplyTwoVsPromotion() {
+    assertThat(solution.checkout("VV")).isEqualTo(90);
+  }
 }
+
