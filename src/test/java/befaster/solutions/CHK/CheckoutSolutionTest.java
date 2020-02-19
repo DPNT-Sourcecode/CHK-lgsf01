@@ -210,7 +210,25 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyGroupDiscount_ForTZZ() {
     assertThat(solution.checkout("TZZ")).isEqualTo(45);
   }
+
+  //
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForSSSZ() {
+    assertThat(solution.checkout("SSSZ")).isEqualTo(65);
+  }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForZZZS() {
+    assertThat(solution.checkout("ZZZS")).isEqualTo(65);
+  }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForSTXZ() {
+    assertThat(solution.checkout("STXZ")).isEqualTo(62);
+  }
 }
+
 
 
 
