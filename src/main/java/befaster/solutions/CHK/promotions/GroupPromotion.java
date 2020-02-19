@@ -11,7 +11,7 @@ public class GroupPromotion implements Promotion {
 
   @Override
   public void apply(Basket basket) {
-    String[] group = {"X", "S", "T", "Y", "Z"};
+    String[] group = {"Z", "S", "T", "Y", "X"};
     int total = basket.getTotal();
     Map<String, Integer> quantities = basket.getQuantities();
 
@@ -49,6 +49,7 @@ public class GroupPromotion implements Promotion {
     return fullPrice - 45;
   }
 }
+
 
 
 
