@@ -121,12 +121,16 @@ public class CheckoutSolutionTest {
 
   }
 
-  Test
+  @Test
   public void checkout_shouldApplyFiveHsPromotion() {
     assertThat(solution.checkout("HHHHH")).isEqualTo(45);
-
   }
 
+  @Test
+  public void checkout_shouldApplyTwoKsPromotion() {
+    assertThat(solution.checkout("KK")).isEqualTo(150);
+  }
 }
+
 
 

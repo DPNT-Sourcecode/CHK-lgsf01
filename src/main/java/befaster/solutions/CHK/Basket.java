@@ -1,7 +1,9 @@
 package befaster.solutions.CHK;
 
 import befaster.solutions.CHK.promotions.FiveAsPromotion;
+import befaster.solutions.CHK.promotions.FiveHsPromotion;
 import befaster.solutions.CHK.promotions.Promotion;
+import befaster.solutions.CHK.promotions.TenHsPromotion;
 import befaster.solutions.CHK.promotions.ThreeAsPromotion;
 import befaster.solutions.CHK.promotions.TwoBsPromotion;
 import befaster.solutions.CHK.promotions.TwoEsGetOneFreeBPromotion;
@@ -24,6 +26,9 @@ public class Basket {
   public Basket() {
     priceList.getAllProducts().forEach(p -> quantities.put(p.getName(), 0));
 
+
+    promotions.add(new TenHsPromotion());
+    promotions.add(new FiveHsPromotion());
     promotions.add(new FiveAsPromotion());
     promotions.add(new ThreeAsPromotion());
     promotions.add(new TwoEsGetOneFreeBPromotion());
@@ -71,3 +76,4 @@ public class Basket {
     this.quantities = quantities;
   }
 }
+
