@@ -176,4 +176,3 @@ public class CheckoutSolutionTest {
     assertThat(solution.checkout("VV")).isEqualTo(90);
   }
 }
-
