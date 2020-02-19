@@ -135,7 +135,18 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyTwoNsGetAFreeMPromotion() {
     assertThat(solution.checkout("NNNM")).isEqualTo(120);
   }
+
+  @Test
+  public void checkout_shouldReturn120_whenGivenThreeNs() {
+    assertThat(solution.checkout("NNN")).isEqualTo(120);
+  }
+
+  @Test
+  public void checkout_shouldApplyFivePsPromotion() {
+    assertThat(solution.checkout("PPPPP")).isEqualTo(200);
+  }
 }
+
 
 
 
