@@ -175,4 +175,10 @@ public class CheckoutSolutionTest {
   public void checkout_shouldApplyTwoVsPromotion() {
     assertThat(solution.checkout("VV")).isEqualTo(90);
   }
+
+  @Test
+  public void checkout_shouldApplyGroupDiscount_ForThreeS() {
+    assertThat(solution.checkout("SSS")).isEqualTo(45);
+  }
 }
+
